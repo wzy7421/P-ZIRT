@@ -1,0 +1,30 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+
+# Local data and generated outputs
+data/*.csv
+data/*.xlsx
+data/*.parquet
+data/*.db
+outputs/
+figures/
+tables/
+review_package/
+manuscript/
+*.docx
+*.pptx
+*.pdf
+*.zip
+*.tar.gz
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
