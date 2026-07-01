@@ -29,6 +29,12 @@ python pzirt_model.py
 
 The demo generates a synthetic roadside V2X-style table with sparse nonzero proxy values, provenance variables, and road-lane groups, then reports baseline and P-ZIRT metrics.
 
+For a fast CPU smoke run:
+
+```bash
+python pzirt_model.py --epochs 2 --patience 1 --batch-size 512 --cpu
+```
+
 ## Run With Your Own CSV
 
 ```bash
@@ -55,6 +61,14 @@ The script reports:
 - nonzero RMSE and MAE;
 - PR-AUC and PR lift for rare-event ranking;
 - Brier score, Brier skill, and ECE for probability calibration.
+
+## Tests
+
+```bash
+pytest -q
+```
+
+The test suite runs a lightweight synthetic smoke test and checks that the core data preparation, baseline metrics, and short CPU training path execute successfully.
 
 ## Manuscript Alignment
 
